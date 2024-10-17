@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% PREÁMBULO  %%%%%%%%%%%%%%%%%
+%% Uso de la clase ITTol-Protocolo
+%% IMPORTANTE: Compilar con LuaLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{ITTol-Protocolo}
+
+% Paquete usado para incluir texto falso (Lorem Ipsum) en el ejemplo 
+\usepackage{lipsum}					
+\usepackage{pgfgantt}
+\usepackage{tocloft}
+% Para links sin decoración
+%\hypersetup{colorlinks=false,allbordercolors=white}
+
+\titulo{Aplicación de Redes Neuronales en el Reconocimiento de Sonido para la Investigación de Fallas en Ventiladores: Desarrollo de un Prototipo Embebido}
+\autor{Frank Prime }
+\grado{Maestría en Ciencias de la Ingeniería}
+\date{Septiembre de 2023}
+\director{Dr. R}
+\codirector{Dr. F}                                      % Si existe un codirector
+
+\newcommand{\todo}{\noindent \emph{\textcolor{red}{\textbf{ToDo~:}}} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% DOCUMENTO  %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle	                                                                            % Crea la carátula
+\frontmatter													% Numeración. en romano 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Resumen en español
+%%\begin{abstract}                                                                   
+%%  \textcolor{gray}{Se presentará en forma breve los aspectos relevantes de su Tesis, 
+%%  como objetivos, resultados y posibles aplicaciones.  No deberá exceder a una cuartilla.}\\
+%%
+%%  \lipsum[1]										%Texto Lorem-Ipsum
+%%\end{abstract}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Resumen en inglés
+%%\selectlanguage{english}                                                     
+%%\begin{abstract}
+%%\textcolor{gray}{The relevant aspects of your thesis will be briefly presented, such as objectives,
+%%results and possible applications. It should not exceed one page.}\\
+%%
+%%\lipsum[2]										%Texto Lorem-Ipsum
+%%\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Índices
+\renewcommand{\contentsname}{Índice} 
+\tableofcontents
+                                                               %  Índice de Contenido
+%{\noskip\listoffigures}                                                            % Índice de Figuras
+%{\noskip\listoftables}                                                             % Índice de Tablas
+
+\mainmatter												% Numeración en arábigo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Capítulos
+\include{a_Introduccion}                                                      	% Introducción.tex
+\include{b_Fundamentos}                     		                 		% Fundamento.tex
+\include{c_EstadoArte}                     		                 		% EstadoArte.tex
+%%\include{e_Resultados}
+\include{e_Metodologia} 
+\include{f_cronogama}                                                   	% Resultados
+%%\include{f_Conclusiones}									% Conclusiones, Perspectivas
+
+\backmatter														% Los capítulos ya no se numeran
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %Apéndices o Anexos (Opcionales)
+%%\appendix	
+%%\include{g_ApendiceA-Demostraciones}			        		% Demostraciones
+%%\include{h_ApendiceB-Fuentes}			          	  	 			% Diagramas
+%\include{i_ApendiceC-Latex}			          	  	 			% Referencia rápida a LaTeX
+
+%% Bibliografía
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{apacite}
+%\renewcommand{\bibname}{Referencias}
+\bibliographystyle{unsrt} 
+\bibliography{biblio}											% Archivo .bib
+\nocite{*}
+
+\end{document}

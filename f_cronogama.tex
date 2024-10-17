@@ -1,0 +1,51 @@
+%!TEX root = Protocolo.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Capítulo 2 / Fundamentos Teóricos y Problemática
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\setcounter{secnumdepth}{0}
+\section{Cronograma de Actividades}
+
+\begin{figure}[h]
+	\centering
+	
+	\resizebox{\linewidth}{!}{%
+		\begin{ganttchart}[
+			y unit title=0.8cm,
+			y unit chart=0.6cm,
+			vgrid,
+			hgrid,
+			title label anchor/.style={below=-1.6ex},
+			title left shift=.05,
+			title right shift=-.05,
+			title height=1,
+			progress label text={},
+			bar height=0.7,
+			group right shift=0,
+			group top shift=.6,
+			group height=.3
+			]{1}{16}
+			%labels
+			\gantttitle{Semestres}{16} \\
+			\gantttitle{1}{4}
+			\gantttitle{2}{4}
+			\gantttitle{3}{4}
+			\gantttitle{4}{4} \\
+			%tasks
+			\ganttbar[progress=100]{1. Revisión Bibliográfica}{1}{1} \\
+			\ganttbar[progress=0]{2. Estado del Arte}{2}{8} \\
+			\ganttbar[progress=0]{3. Protocolo}{2}{3} \\
+			\ganttbar[progress=0]{4. Diseño de Experimento}{2}{5} \\
+			\ganttbar[progress=0]{5. Colecciones de Datos}{3}{10} \\
+			\ganttbar[progress=0]{6. Programación de Algoritmos}{5}{10} \\
+			\ganttbar[progress=0]{7. Análisis de Resultados}{5}{11} \\
+			\ganttbar[progress=0]{8. Presentación en Congreso}{6}{11} \\
+			\ganttbar[progress=0]{9. Redacción de Artículo}{2}{12} \\
+			\ganttbar[progress=0]{10. Escritura de Tesis}{2}{16} \\
+		\end{ganttchart}%
+	}
+	\caption{Plan de Trabajo}
+\end{figure}
+
+
